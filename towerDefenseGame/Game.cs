@@ -16,9 +16,17 @@ namespace towerDefenseGame
             {
                 MapLocation maplocation = new MapLocation(9, 9, map);
             }
-            catch (Exception ex)
+            catch (OutOfBoundsException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            catch (towerDefenseGameException)
+            {
+                Console.WriteLine("unhandled towerDefenseGameException");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("unhandled Exception");
             }
             
 

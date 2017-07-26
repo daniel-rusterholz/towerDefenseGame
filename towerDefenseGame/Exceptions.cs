@@ -6,7 +6,26 @@ using System.Threading.Tasks;
 
 namespace towerDefenseGame
 {
-    class Exceptions
+    class towerDefenseGameException : System.Exception
     {
+        public towerDefenseGameException()
+        {
+        }
+
+        public towerDefenseGameException(string message) : base(message)
+        {
+        }
+    }
+
+    class OutOfBoundsException : towerDefenseGameException
+    {
+        public OutOfBoundsException()
+        {
+        }
+
+        public OutOfBoundsException(string message) : base(message)
+        {
+            
+        }
     }
 }
