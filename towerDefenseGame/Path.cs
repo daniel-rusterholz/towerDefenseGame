@@ -15,6 +15,16 @@ namespace towerDefenseGame
             _path = path;
         }
 
-        public GetLocationAt(int )
+        public double GetLocationAt(int pathStep)
+        {
+            if (pathStep < _path.Length)
+            {
+                return double.Parse(_path[pathStep].ToString());
+            }
+            else
+            {
+                return 0.0;
+            }
+        }
     }
 }
