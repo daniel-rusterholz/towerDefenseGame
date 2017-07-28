@@ -8,5 +8,16 @@ namespace towerDefenseGame
 {
     class Invader
     {
+        private MapLocation _loaction;
+
+        public MapLocation GetLocation()
+        {
+            return _loaction;
+        }
+
+        public void SetLocation(MapLocation value)
+        {
+            _loaction = value;
+        }
     }
 }
