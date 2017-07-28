@@ -14,18 +14,37 @@ namespace towerDefenseGame
 
             try
             {
-                //MapLocation maplocation = new MapLocation(9, 9, map);
+                Path path = new Path(
+                    new [] {
+                        new MapLocation(0, 2, map),
+                        new MapLocation(1, 2, map),
+                        new MapLocation(2, 2, map),
+                        new MapLocation(3, 2, map),
+                        new MapLocation(4, 2, map),
+                        new MapLocation(5, 2, map),
+                        new MapLocation(6, 2, map),
+                        new MapLocation(7, 2, map)
+                    }
+                );
 
-                MapLocation[] path = {
-                    new MapLocation(0, 2, map),
-                    new MapLocation(1, 2, map),
-                    new MapLocation(2, 2, map),
-                    new MapLocation(3, 2, map),
-                    new MapLocation(4, 2, map),
-                    new MapLocation(5, 2, map),
-                    new MapLocation(6, 2, map),
-                    new MapLocation(7, 2, map)
-                };
+                MapLocation location = path.GetLocationAt(8);
+
+                if (location != null)
+                { 
+                    Console.WriteLine(location.X + "," + location.Y);
+                }
+
+                //MapLocation maplocation = new MapLocation(9, 9, map);
+                //MapLocation[] path = {
+                //    new MapLocation(0, 2, map),
+                //    new MapLocation(1, 2, map),
+                //    new MapLocation(2, 2, map),
+                //    new MapLocation(3, 2, map),
+                //    new MapLocation(4, 2, map),
+                //    new MapLocation(5, 2, map),
+                //    new MapLocation(6, 2, map),
+                //    new MapLocation(7, 2, map)
+                //};
             }
             catch (OutOfBoundsException ex)
             {
@@ -35,9 +54,9 @@ namespace towerDefenseGame
             {
                 Console.WriteLine("unhandled towerDefenseGameException");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("unhandled Exception");
+                Console.WriteLine("unhandled Exception: " + ex);
             }
             
 
