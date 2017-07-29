@@ -27,24 +27,13 @@ namespace towerDefenseGame
                     }
                 );
 
-                MapLocation location = path.GetLocationAt(8);
+                Invader invader = new Invader();
+                MapLocation location = new MapLocation(0, 0, map);
 
-                if (location != null)
-                { 
-                    Console.WriteLine(location.X + "," + location.Y);
-                }
+                invader.SetLocation(location);
 
-                //MapLocation maplocation = new MapLocation(9, 9, map);
-                //MapLocation[] path = {
-                //    new MapLocation(0, 2, map),
-                //    new MapLocation(1, 2, map),
-                //    new MapLocation(2, 2, map),
-                //    new MapLocation(3, 2, map),
-                //    new MapLocation(4, 2, map),
-                //    new MapLocation(5, 2, map),
-                //    new MapLocation(6, 2, map),
-                //    new MapLocation(7, 2, map)
-                //};
+                location = invader.Location;
+
             }
             catch (OutOfBoundsException ex)
             {

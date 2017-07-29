@@ -10,14 +10,18 @@ namespace towerDefenseGame
     {
         private MapLocation _loaction;
 
-        public MapLocation GetLocation()
+        //Properties
+        public MapLocation Location
         {
-            return _loaction;
-        }
-
-        public void SetLocation(MapLocation value)
-        {
-            _loaction = value;
+            get
+            {
+                return _loaction;
+            }
+            set
+            {
+                _loaction = value;
+                Console.WriteLine("Lacation changed");
+            }
         }
     }
 }
