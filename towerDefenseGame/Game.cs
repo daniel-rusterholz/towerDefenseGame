@@ -27,13 +27,6 @@ namespace towerDefenseGame
                     }
                 );
 
-                Invader invader = new Invader();
-                MapLocation location = new MapLocation(0, 0, map);
-
-                invader.SetLocation(location);
-
-                location = invader.Location;
-
             }
             catch (OutOfBoundsException ex)
             {

@@ -8,20 +8,7 @@ namespace towerDefenseGame
 {
     class Invader
     {
-        private MapLocation _loaction;
-
-        //Properties
-        public MapLocation Location
-        {
-            get
-            {
-                return _loaction;
-            }
-            set
-            {
-                _loaction = value;
-                Console.WriteLine("Lacation changed");
-            }
-        }
+        //c# Auto properti - Automatic implements a getter and setter
+        public MapLocation Location { get; private set; }
     }
 }
