@@ -8,8 +8,8 @@ namespace towerDefenseGame
 {
     class Invader
     {
-        private readonly Path _path;
-        private int _pathStep = 0;
+        private readonly Path _path; //Fields
+        private int _pathStep = 0; //Fields
 
         //c# Auto properti - Automatic implements a getter and setter
         public MapLocation Location { get; private set; }
